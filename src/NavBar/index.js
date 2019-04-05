@@ -59,20 +59,33 @@ class NavBar extends Component {
 		const cookies = new Cookies();
 
 		return (
-		<header>
-			<Link to = "/"> <img src="/images/VanLogoWhite.png" alt="van-logo" id="logo"/> </Link>
-			<nav>
-				<Link to = "/schedule">SCHEDULE</Link>
-				<Link to = "/stats">TEAMS & STANDING</Link>
+		<header>	
+			<div className="topnavbar">		
+				<Link to = "/"> <img src="/images/VanLogoWhite.png" alt="van-logo" id="logo"/> </Link>
+			<div className="nav-btn">
+				<label for="nav-check">
+				<span></span>
+				<span></span>
+				<span></span>
+				</label>
+			</div>
+
+			<input type="checkbox" id="nav-check"/>
+
+			<nav className="nav-links">
+			
+				<a><Link to = "/schedule">SCHEDULE</Link></a>
+				<a><Link to = "/stats">TEAMS & STANDING</Link></a>
 				<a href="https://www.twitch.tv/vangamingleague">WATCH</a>
 				<a onClick={this.showDropdown} > ABOUT VGL </a>
 				
 				{ this.state.dropdown ? dropdownInfo : null }
 				
-				<Link to = "/login">{cookies.get('userId') ? <span onClick={this.logout}> LOGOUT </span> : <span> LOGIN </span>}</Link>
-
+				<a><Link to = "/login">{cookies.get('userId') ? <span onClick={this.logout}> LOGOUT </span> : <span> LOGIN </span>}</Link></a>
+			
 
 			</nav>
+			</div>
 		</header>
 
 		)
