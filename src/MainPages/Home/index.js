@@ -17,41 +17,44 @@ class Home extends Component {
         </section> 
         <section> 
 
-        	<div className="title"> 
-
-	        	- Top Players -
-	        </div>
 	        <div className="imgrow"> 
 	        	<div>
-	        		<a className="champ" href="http://na.op.gg/summoner/userName=sin+incarnate"> <img src="https://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/Ornn.png" alt="Sin" /></a>
-	        		<h3> Sin Incarnate </h3>
-	        		<h4 className="plat">⬦ PLAT 4 ⬦</h4>
-
+	        		<a className="champ" href="/team/5c98fa92def2ea0017d3a0ea"> <img src="https://3.bp.blogspot.com/-aD-96vjkcno/WG6o0yRFlYI/AAAAAAABA3g/3MJik7Rx0rA3fA8LDyflYwftScU1S8ojgCLcB/s1600/Lucian_7.jpg" alt="luc" /></a>
+	        		<div className="team-name"> 
+		        		<h3> Banana Peels </h3>		        		
+	        		</div>
 	        	</div> 
 	        	<div> 
-	        		<a className="champ" href="http://na.op.gg/summoner/userName=Leesin+Incarnate"> <img src="https://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/LeeSin.png" alt="Leesin Incarnate"/></a>
-	        		<h3> Leesin Incarnate </h3>
-	        		<h4 className="diamond">⬦ DIAMOND 4 ⬦</h4>
-
+	        		<a className="champ" href="/team/5c98fa33def2ea0017d3a0e8"> <img src="https://lolskinshop.com/wp-content/uploads/2018/08/LeeSin_11.jpg" alt="Leesin Incarnate"/></a>
+	        		<div className="team-name"> 
+		        		<h3> Skinny Penis & The Scallywags </h3>
+	        		</div>
 	        	</div>
 	        	<div> 
-	        		<a className="champ" href="http://na.op.gg/summoner/userName=Xatuo"> <img src="https://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/Zed.png" alt="Xatuo"/></a>
-	        		<h3> Xatuo </h3>
-	        		<h4 className="plat">⟡ PLAT 4 ⟡</h4>
-
+	        		<a className="champ" href="/team/5c98fb32def2ea0017d3a0ec"> <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/6/6b/Kayn_0.jpg?version=f8b64c5028ede48cdff98a774c0a0c86" alt="kayn"/></a>
+					<div className="team-name"> 
+		        		<h3> Jungle is Ruined</h3>
+	        		</div>
+	        	</div>
+	        	<div> 
+	        		<a className="champ" href="/team/5c98faafdef2ea0017d3a0eb"> <img src="https://lolskinshop.com/wp-content/uploads/2015/05/battle-regalia-poppy-loading.jpg" alt="poppy"/></a>
+	        		<div className="team-name"> 
+		        		<h3> Blake's Bitches ft. Drek</h3>
+	        		</div>
 	        	</div>
 	        	<div>
-	        		<a className="champ" href="http://na.op.gg/summoner/userName=trueanxiety"> <img src="https://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/Vayne.png" alt="Plezzy Reformed" /></a>
-	        		<h3> Plezzy </h3>
-	        		<h4 className="diamond">⬦ DIAMOND 2 ⬦</h4>
-
+	        		<a className="champ" href="/team/5c476a959f3fdb0017f1b8b2"> <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/3/37/Sejuani_0.jpg" alt="sej" /></a>
+	        		<div className="team-name"> 
+		        		<h3> Marauder Esports</h3>
+	        		</div>
 	        	</div>
 	        	<div>
-	        		<a className="champ" href="http://na.op.gg/summoner/userName=WhaddupJohn"> <img src="https://ddragon.leagueoflegends.com/cdn/9.3.1/img/champion/Taric.png" alt="john" /></a>
-	        		<h3> WHADDUPJOHN</h3>
-	        		<h4 className="plat">⟡ PLAT 4 ⟡</h4>
-
+	        		<a className="champ" href="/team/5c98fa89def2ea0017d3a0e9"> <img src="https://i.pinimg.com/originals/e4/bb/5c/e4bb5cf2366df3fb2b2615124c35a5de.jpg" alt="sej" /></a>
+	        		<div className="team-name"> 
+		        		<h3> Ayayas </h3>
+	        		</div>
 	        	</div>
+	        	
 	        </div> 
 
         </section>

@@ -6,9 +6,9 @@ import './nav.css';
 
 const dropdownInfo = (<div className="dropdown-content">
 					<ul>
-						<a className="drop" href="https://discord.gg/kwNwr7J"><li>DISCORD</li></a>
-						<a className="drop" href="https://www.twitch.tv/vangamingleague"><li>TWITCH</li></a>
-						<a className="drop" href="/signup"><li>JOIN LEAGUE</li></a>
+						<a className="drop"  target="_blank" href="https://discord.gg/kwNwr7J"><li>DISCORD</li></a>
+						<a className="drop"  target="_blank" href="https://www.twitch.tv/vangamingleague"><li>TWITCH</li></a>
+						<a className="drop" href="/"><li>JOIN LEAGUE</li></a>
 
 					</ul>
 				</div>);
@@ -64,12 +64,11 @@ class NavBar extends Component {
 			<nav>
 				<Link to = "/schedule">SCHEDULE</Link>
 				<Link to = "/stats">TEAMS & STANDING</Link>
-				<a href="https://www.twitch.tv/vangamingleague">WATCH</a>
+				<a href="https://www.twitch.tv/vangamingleague" target="_blank">WATCH</a>
 				<a onClick={this.showDropdown} > ABOUT VGL </a>
 				
 				{ this.state.dropdown ? dropdownInfo : null }
 				
-				<Link to = "/login">{cookies.get('userId') ? <span onClick={this.logout}> LOGOUT </span> : <span> LOGIN </span>}</Link>
 
 
 			</nav>

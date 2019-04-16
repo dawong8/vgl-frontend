@@ -1,5 +1,6 @@
 import React, {Component} from 'react'; 
 import Login from '../Login';
+// import {Redirect} from 'react-router-dom';
 
 class AdminPages extends Component {
 	constructor() {
@@ -14,7 +15,6 @@ class AdminPages extends Component {
 		return (
 			<div> 
 				<Login admin={true} />
-
 
 			</div>
 			)

@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import NavBar from '../NavBar';
 import Cookies from 'universal-cookie'; // here!!!!
 
+import EditTeams from '../EditTeams';
+
+
 import './login.css';
 
 class Login extends Component {
@@ -17,7 +20,8 @@ class Login extends Component {
 				username: '', 
 				password: '', 
 				error: '',
-			}
+			}, 
+			loginSucess: false,
 			
 		}
 	}
@@ -80,13 +84,18 @@ class Login extends Component {
 					console.log("Login username: ", this.state.login.username);
 					console.log("Parsed response: ", parsedReponse);
 					cookies.set('userId', parsedReponse.userId);
-					console.log("Cookie value: ", cookies.get('userId'));
+					console.log("Cookie value: are we here ", cookies.get('userId'));
 					
 					if (!parsedReponse.isAdmin) {
-						this.props.history.push('/stats');
+						// this.props.history.push('/stats');
 
 					} else {
-						this.props.history.push('/secret');
+
+						// this.props.history.push('/secret');
+
+						this.setState({
+							loginSucess: true
+						})
 					}
 
 
@@ -142,7 +151,6 @@ class Login extends Component {
 				
 
 		} catch (err) {
-			console.log('yy', err)
 			return err; 
 		}
 	}
@@ -151,15 +159,23 @@ class Login extends Component {
 		return (
 			<div>
 				<NavBar/>
-				<form className="modal" onSubmit={this.handleLoginSubmit}>
-					<h3> {this.props.admin ? <span> ADMIN LOGIN </span> : <span> LOGIN </span>} </h3>
+				{
+					this.state.loginSucess ? 
+					<EditTeams />
 
-					<p className="error"> {this.state.login.error ? this.state.login.error : null} </p>
-					<input type="text" name="username" value={this.state.username}  onChange={this.handleLoginInput} /> <br /> 
-					<input type="password" name="password" value={this.state.password}  onChange={this.handleLoginInput} /> <br/>
-					<input type="submit" /> 
+					:
+					<form className="modal" onSubmit={this.handleLoginSubmit}>
+						<h3> {this.props.admin ? <span> ADMIN LOGIN </span> : <span> LOGIN </span>} </h3>
 
-				</form>
+						<p className="error"> {this.state.login.error ? this.state.login.error : null} </p>
+						<input type="text" name="username" value={this.state.username}  onChange={this.handleLoginInput} /> <br /> 
+						<input type="password" name="password" value={this.state.password}  onChange={this.handleLoginInput} /> <br/>
+						<input type="submit" /> 
+
+					</form>
+
+				}
+				
 				{ 
 					this.props.admin ? 
 					null : 
